@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "description": "Jeux de payloads légers pour valider les endpoints CRUD sans coût réseau important.",
+    "generatedAt": "2025-11-10T00:00:00Z",
+    "variant": "light"
+  },
+  "categories": [
+    {
+      "code": "LIGHT-CAT-001",
+      "name": "Light Category Alpha",
+      "description": "Catégorie légère pour tests rapides."
+    },
+    {
+      "code": "LIGHT-CAT-002",
+      "name": "Light Category Beta",
+      "description": "Catégorie légère secondaire."
+    }
+  ],
+  "items": [
+    {
+      "sku": "LIGHT-ITEM-001",
+      "name": "Lightweight Item A",
+      "price": 19.99,
+      "stock": 50,
+      "description": "Payload minimal pour POST / PUT d'items."
+    },
+    {
+      "sku": "LIGHT-ITEM-002",
+      "name": "Lightweight Item B",
+      "price": 24.50,
+      "stock": 35,
+      "description": "Deuxième payload léger."
+    }
+  ]
+}
+{
+  "metadata": {
+    "variant": "light",
+    "description": "Payloads légers pour les scénarios de fumée et de préchauffage.",
+    "generatedAt": "2025-11-10T00:00:00Z"
+  },
+  "createCategory": {
+    "code": "CAT-LOAD-001",
+    "name": "Load Test Category"
+  },
+  "createItem": {
+    "sku": "LOAD-ITEM-001",
+    "name": "Load Item Lightweight",
+    "price": 19.99,
+    "stock": 120,
+    "description": "Payload minimal pour tester les POST items.",
+    "categoryCode": "CAT-LOAD-001"
+  },
+  "bulkItems": [
+    {
+      "sku": "LOAD-ITEM-002",
+      "name": "Load Item 2",
+      "price": 24.50,
+      "stock": 75,
+      "description": "Second item pour tests légers.",
+      "categoryCode": "CAT-LOAD-001"
+    },
+    {
+      "sku": "LOAD-ITEM-003",
+      "name": "Load Item 3",
+      "price": 15.00,
+      "stock": 90,
+      "description": "Troisième item pour enchaînements rapides.",
+      "categoryCode": "CAT-LOAD-001"
+    }
+  ]
+}
+

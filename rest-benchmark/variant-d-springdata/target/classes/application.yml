@@ -1,0 +1,84 @@
+# Configuration Spring Data REST
+spring:
+  config:
+    import: application-common.yml
+
+  application:
+    name: variant-d-springdata
+
+  # Datasource (override possible via variables d'environnement)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/benchmark_db
+    username: benchmark_user
+    password: benchmark_pass
+
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: false
+        format_sql: false
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        default_batch_fetch_size: 100
+    open-in-view: false
+
+  # Spring Data REST
+  data:
+    rest:
+      base-path: /api
+      default-page-size: 50
+      max-page-size: 100
+      # Désactiver l'exposition automatique si besoin
+      # detection-strategy: annotated
+
+  # Jackson pour HAL
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: false
+    deserialization:
+      fail-on-unknown-properties: true
+
+# Server
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when_authorized
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+        step: 10s
+
+# Logging
+logging:
+  level:
+    com.benchmark: INFO
+    org.hibernate.SQL: WARN
+    org.springframework.data.rest: INFO
+    org.springframework.data.web: WARN
+
+# Configuration benchmark
+benchmark:
+  variant: spring-data-rest

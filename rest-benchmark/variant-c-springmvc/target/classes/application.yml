@@ -1,0 +1,29 @@
+# Import de la configuration commune
+spring:
+  config:
+    import: application-common.yml
+
+  # Configuration spécifique à l'application
+  application:
+    name: variant-c-springmvc
+
+  # Datasource (sera override par les variables d'environnement Docker)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/benchmark_db
+    username: benchmark_user
+    password: benchmark_pass
+
+# Configuration serveur
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+# Configuration spécifique au benchmark
+benchmark:
+  variant: spring-mvc
+  enable-join-fetch: ${BENCHMARK_JOIN_FETCH:true}

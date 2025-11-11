@@ -1,0 +1,243 @@
+{
+  "sku": "SKU-HEAVY-${__UUID()}",
+  "name": "Heavy Payload Item ${__Random(1000,9999,heavyItemName)}",
+  "description": "Charge utile volumineuse destinée aux scénarios de stress. Ce document JSON contient un grand nombre de champs pour approcher un gabarit de 5KB et simuler des corps HTTP conséquents.",
+  "price": ${__javaScript(Math.round((Math.random()*1900+100)*100)/100)},
+  "stock": ${__javaScript(Math.round(Math.random()*900+100))},
+  "categoryId": ${categoryId},
+  "lifecycle": {
+    "createdAt": "${__time(yyyy-MM-dd'T'HH:mm:ss.SSSXXX,)}",
+    "createdBy": "heavy-body-plan",
+    "channels": [
+      "web",
+      "mobile",
+      "retail",
+      "partners"
+    ],
+    "tags": [
+      "heavy",
+      "payload-5k",
+      "benchmark",
+      "stress",
+      "performance",
+      "rest",
+      "jmeter"
+    ]
+  },
+  "specifications": {
+    "dimensions": {
+      "width": 45.2,
+      "height": 91.8,
+      "depth": 33.0,
+      "weight": 12.4,
+      "unit": "cm"
+    },
+    "materials": [
+      "Aluminium renforcé",
+      "Composite carbone",
+      "Alliage titane",
+      "Polymère haute densité"
+    ],
+    "power": {
+      "input": "100-240V",
+      "frequency": "50/60Hz",
+      "consumption": 450,
+      "unit": "W"
+    },
+    "thermal": {
+      "minTemp": -20,
+      "maxTemp": 80,
+      "unit": "C"
+    }
+  },
+  "packages": [
+    {
+      "name": "Starter Bundle",
+      "items": [
+        "Chargeur rapide 120W",
+        "Station d'accueil avancée",
+        "Housse renforcée"
+      ],
+      "warranty": "24 months"
+    },
+    {
+      "name": "Enterprise Bundle",
+      "items": [
+        "Kit maintenance premium",
+        "Module d'extension réseau",
+        "Service support dédié",
+        "Accès monitoring"
+      ],
+      "warranty": "36 months"
+    }
+  ],
+  "compliance": {
+    "certifications": [
+      "CE",
+      "UL",
+      "RoHS",
+      "ISO 9001",
+      "ISO 14001"
+    ],
+    "regulations": [
+      {
+        "region": "EU",
+        "refs": [
+          "EN61000",
+          "EN55032",
+          "Directive 2014/30/EU",
+          "Directive 2011/65/EU"
+        ]
+      },
+      {
+        "region": "NA",
+        "refs": [
+          "FCC Part 15",
+          "UL 60950-1",
+          "CSA C22.2"
+        ]
+      }
+    ]
+  },
+  "support": {
+    "documentation": [
+      "https://docs.example.com/heavy/setup",
+      "https://docs.example.com/heavy/maintenance",
+      "https://docs.example.com/heavy/api",
+      "https://docs.example.com/heavy/faq"
+    ],
+    "contact": {
+      "email": "perf-support@example.com",
+      "phone": "+33-1-23-45-67-89",
+      "hours": "24/7"
+    }
+  },
+  "metadata": {
+    "payload": "5k",
+    "scenario": "heavy-body",
+    "checksum": "${__UUID()}",
+    "notes": "Ce template est utilisé pour générer des requêtes HTTP volumineuses et solliciter fortement les couches réseau et de sérialisation."
+  }
+}
+{
+  "sku": "SKU-HEAVY-${__UUID()}",
+  "name": "Heavy Payload Item ${__Random(1000,9999,heavyItemName)}",
+  "description": "Charge utile volumineuse destinée aux scénarios de stress. Ce document JSON contient un grand nombre de champs pour approcher un gabarit de 5KB et simuler des corps HTTP conséquents.",
+  "price": ${__javaScript(Math.round((Math.random()*1900+100)*100)/100)},
+  "stock": ${__javaScript(Math.round(Math.random()*900+100))},
+  "categoryId": ${categoryId},
+  "lifecycle": {
+    "createdAt": "${__time(yyyy-MM-dd'T'HH:mm:ss.SSSXXX,)}",
+    "createdBy": "heavy-body-plan",
+    "channels": [
+      "web",
+      "mobile",
+      "retail",
+      "partners"
+    ],
+    "tags": [
+      "heavy",
+      "payload-5k",
+      "benchmark",
+      "stress",
+      "performance",
+      "rest",
+      "jmeter"
+    ]
+  },
+  "specifications": {
+    "dimensions": {
+      "width": 45.2,
+      "height": 91.8,
+      "depth": 33.0,
+      "weight": 12.4,
+      "unit": "cm"
+    },
+    "materials": [
+      "Aluminium renforcé",
+      "Composite carbone",
+      "Alliage titane",
+      "Polymère haute densité"
+    ],
+    "power": {
+      "input": "100-240V",
+      "frequency": "50/60Hz",
+      "consumption": 450,
+      "unit": "W"
+    },
+    "thermal": {
+      "minTemp": -20,
+      "maxTemp": 80,
+      "unit": "C"
+    }
+  },
+  "packages": [
+    {
+      "name": "Starter Bundle",
+      "items": [
+        "Chargeur rapide 120W",
+        "Station d'accueil avancée",
+        "Housse renforcée"
+      ],
+      "warranty": "24 months"
+    },
+    {
+      "name": "Enterprise Bundle",
+      "items": [
+        "Kit maintenance premium",
+        "Module d'extension réseau",
+        "Service support dédié",
+        "Accès monitoring"
+      ],
+      "warranty": "36 months"
+    }
+  ],
+  "compliance": {
+    "certifications": [
+      "CE",
+      "UL",
+      "RoHS",
+      "ISO 9001",
+      "ISO 14001"
+    ],
+    "regulations": [
+      {
+        "region": "EU",
+        "refs": [
+          "EN61000",
+          "EN55032",
+          "Directive 2014/30/EU",
+          "Directive 2011/65/EU"
+        ]
+      },
+      {
+        "region": "NA",
+        "refs": [
+          "FCC Part 15",
+          "UL 60950-1",
+          "CSA C22.2"
+        ]
+      }
+    ]
+  },
+  "support": {
+    "documentation": [
+      "https://docs.example.com/heavy/setup",
+      "https://docs.example.com/heavy/maintenance",
+      "https://docs.example.com/heavy/api",
+      "https://docs.example.com/heavy/faq"
+    ],
+    "contact": {
+      "email": "perf-support@example.com",
+      "phone": "+33-1-23-45-67-89",
+      "hours": "24/7"
+    }
+  },
+  "metadata": {
+    "payload": "5k",
+    "scenario": "heavy-body",
+    "checksum": "${__UUID()}",
+    "notes": "Ce template est utilisé pour générer des requêtes HTTP volumineuses et solliciter fortement les couches réseau et de sérialisation."
+  }
+}
+

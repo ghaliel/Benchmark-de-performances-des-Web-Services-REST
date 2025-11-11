@@ -1,0 +1,47 @@
+{
+  "sku": "${sku}",
+  "name": "${itemName}",
+  "description": "${itemDescription}",
+  "price": ${itemPrice},
+  "stock": ${itemStock},
+  "categoryId": ${categoryIdValue},
+  "attributes": {
+    "brand": "Benchmark Labs",
+    "collection": "Mixed Scenario",
+    "lifecycle": {
+      "createdBy": "jmeter-mixed",
+      "createdAt": "${__time(yyyy-MM-dd'T'HH:mm:ss.SSSXXX,)}",
+      "notes": "Généré à la volée pour les tests mixtes."
+    },
+    "dimensions": {
+      "width": 12.5,
+      "height": 7.8,
+      "depth": 2.1,
+      "weight": 0.8,
+      "unit": "cm"
+    },
+    "tags": [
+      "load",
+      "mixed",
+      "payload-1k",
+      "benchmark",
+      "rest"
+    ]
+  },
+  "specs": {
+    "material": "Alloy + Composite",
+    "color": "Graphite",
+    "power": "Universal",
+    "features": [
+      "Résistant aux chocs",
+      "Optimisé pour fortes charges",
+      "Garantie 2 ans",
+      "Support premium"
+    ],
+    "metadata": {
+      "revision": "1.0.0",
+      "source": "payload-item-1k.json"
+    }
+  }
+}
+

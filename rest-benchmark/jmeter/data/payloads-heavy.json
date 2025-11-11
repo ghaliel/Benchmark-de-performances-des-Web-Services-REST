@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "description": "Payloads riches pour orchestrer des scénarios lourds (multi-catégories, items volumineux).",
+    "generatedAt": "2025-11-10T00:00:00Z",
+    "variant": "heavy"
+  },
+  "categories": [
+    {
+      "code": "HEAVY-CAT-ELEC",
+      "name": "Heavy Electronics",
+      "attributes": {
+        "segment": "electronics",
+        "region": "EU",
+        "tags": ["heavy", "benchmark", "electronics"],
+        "metadata": {
+          "owner": "perf-team",
+          "notes": "Catégorie de forte charge pour l'électronique."
+        }
+      }
+    },
+    {
+      "code": "HEAVY-CAT-APP",
+      "name": "Heavy Apparel",
+      "attributes": {
+        "segment": "fashion",
+        "region": "NA",
+        "tags": ["heavy", "benchmark", "fashion"],
+        "metadata": {
+          "owner": "perf-team",
+          "notes": "Catégorie textile pour scénarios lourds."
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "sku": "HEAVY-ITEM-LAPTOP",
+      "name": "Heavy Duty Laptop",
+      "price": 1899.99,
+      "stock": 300,
+      "description": "Laptop de charge maximale (JSON dense).",
+      "categoryCode": "HEAVY-CAT-ELEC",
+      "specs": {
+        "cpu": "Intel Core i9",
+        "ram": "64GB",
+        "storage": "2TB NVMe",
+        "gpu": "RTX 4090",
+        "extras": ["Thunderbolt 4", "WiFi 7", "Bluetooth 5.4"]
+      }
+    },
+    {
+      "sku": "HEAVY-ITEM-JACKET",
+      "name": "Heavy Jacket Premium",
+      "price": 349.90,
+      "stock": 800,
+      "description": "Veste premium avec attributs détaillés.",
+      "categoryCode": "HEAVY-CAT-APP",
+      "attributes": {
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "materials": ["Gore-Tex", "Polyester recyclé"]
+      }
+    }
+  ]
+}
+{
+  "metadata": {
+    "variant": "heavy",
+    "description": "Payloads riches pour tests de charge intenses (JSON ~5 KB).",
+    "generatedAt": "2025-11-10T00:00:00Z"
+  },
+  "categories": [
+    {
+      "code": "CAT-HEAVY-001",
+      "name": "Heavy Test Electronics",
+      "attributes": {
+        "segment": "electronics",
+        "region": "EU",
+        "tags": ["heavy", "benchmark", "electronics"],
+        "metadata": {
+          "owner": "perf-team",
+          "createdAt": "2025-11-10T00:00:00Z",
+          "notes": "Catégorie utilisée pour simuler des charges massives."
+        }
+      }
+    },
+    {
+      "code": "CAT-HEAVY-002",
+      "name": "Heavy Test Apparel",
+      "attributes": {
+        "segment": "fashion",
+        "region": "NA",
+        "tags": ["heavy", "benchmark", "fashion"],
+        "metadata": {
+          "owner": "perf-team",
+          "createdAt": "2025-11-10T00:00:00Z",
+          "notes": "Catégorie vêtements pour scénarios volumineux."
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "sku": "HEAVY-ITEM-001",
+      "name": "Heavy Duty Laptop",
+      "price": 1899.99,
+      "stock": 500,
+      "description": "Laptop haut de gamme avec configuration extrême pour tests de payload.",
+      "categoryCode": "CAT-HEAVY-001",
+      "specs": {
+        "cpu": "Intel Core i9",
+        "ram": "64GB",
+        "storage": "2TB NVMe",
+        "gpu": "RTX 4090",
+        "extras": ["Thunderbolt 4", "WiFi 7", "Bluetooth 5.4", "Fingerprint Reader"]
+      },
+      "variants": [
+        {
+          "color": "Space Black",
+          "warranty": "3 years",
+          "bundle": ["Mouse", "External SSD", "Docking Station"]
+        },
+        {
+          "color": "Silver",
+          "warranty": "2 years",
+          "bundle": ["Mouse", "Carrying Case"]
+        }
+      ]
+    },
+    {
+      "sku": "HEAVY-ITEM-002",
+      "name": "Heavy Jacket Premium",
+      "price": 349.90,
+      "stock": 1200,
+      "description": "Veste premium pour tests lourds incluant des attributs variés.",
+      "categoryCode": "CAT-HEAVY-002",
+      "attributes": {
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "materials": ["Gore-Tex", "Polyester recyclé"],
+        "careInstructions": [
+          "Lavage à froid",
+          "Ne pas utiliser d'adoucissant",
+          "Séchage à l'air libre"
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Load Tester 1",
+          "rating": 4.5,
+          "comment": "Produit utilisé pour simuler des charges lourdes.",
+          "postedAt": "2025-11-09T20:15:00Z"
+        },
+        {
+          "author": "Load Tester 2",
+          "rating": 4.8,
+          "comment": "Parfait pour les scénarios de montée en charge prolongée.",
+          "postedAt": "2025-11-09T21:42:00Z"
+        }
+      ]
+    }
+  ]
+}
+

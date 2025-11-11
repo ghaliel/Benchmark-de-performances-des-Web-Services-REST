@@ -1,0 +1,89 @@
+services:
+  # Base de données
+  postgres:
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_DB: benchmark_db
+      POSTGRES_USER: benchmark_user
+      POSTGRES_PASSWORD: benchmark_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - benchmark-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U benchmark_user -d benchmark_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Variante A - Jersey (Java 21)
+  variant-a-jersey:
+    build:
+      context: .  # Context à la racine pour accéder à tous les modules
+      dockerfile: ./variant-a-jersey/Dockerfile
+    ports:
+      - "8081:8080"
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/benchmark_db
+      DB_USER: benchmark_user
+      DB_PASSWORD: benchmark_pass
+      USE_JOIN_FETCH: "true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - benchmark-net
+
+  variant-c-springmvc:
+    build:
+      context: .
+      dockerfile: ./variant-c-springmvc/Dockerfile
+    ports:
+      - "8082:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/benchmark_db
+      SPRING_DATASOURCE_USERNAME: benchmark_user
+      SPRING_DATASOURCE_PASSWORD: benchmark_pass
+      USE_JOIN_FETCH: "true"
+    depends_on:
+      - postgres
+    networks:
+      - benchmark-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  variant-d-springdata:
+    build:
+      context: .
+      dockerfile: ./variant-d-springdata/Dockerfile
+    ports:
+      - "8083:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/benchmark_db
+      SPRING_DATASOURCE_USERNAME: benchmark_user
+      SPRING_DATASOURCE_PASSWORD: benchmark_pass
+      SPRING_DATA_REST_BASE_PATH: /api
+    depends_on:
+      - postgres
+    networks:
+      - benchmark-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+
+volumes:
+  postgres_data:
+
+networks:
+  benchmark-net:
+    driver: bridge

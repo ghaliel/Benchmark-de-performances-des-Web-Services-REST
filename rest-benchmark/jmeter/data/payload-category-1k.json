@@ -1,0 +1,59 @@
+{
+  "code": "${categoryCode}",
+  "name": "${categoryName}",
+  "description": "${categoryDescription}",
+  "segment": "benchmark-load",
+  "visibility": "PUBLIC",
+  "metadata": {
+    "owner": "perf-team",
+    "createdAt": "${__time(yyyy-MM-dd'T'HH:mm:ss.SSSXXX,)}",
+    "notes": "Catégorie générée dynamiquement pour le scénario mixte."
+  },
+  "labels": [
+    "mix",
+    "benchmark",
+    "category-1k",
+    "rest"
+  ],
+  "compliance": {
+    "regions": [
+      "EMEA",
+      "AMER",
+      "APAC"
+    ],
+    "restrictions": {
+      "age": "NONE",
+      "shipping": "WORLDWIDE"
+    }
+  }
+}
+{
+  "code": "${categoryCode}",
+  "name": "${categoryName}",
+  "description": "${categoryDescription}",
+  "segment": "benchmark-load",
+  "visibility": "PUBLIC",
+  "metadata": {
+    "owner": "perf-team",
+    "createdAt": "${__time(yyyy-MM-dd'T'HH:mm:ss.SSSXXX,)}",
+    "notes": "Catégorie générée dynamiquement pour le scénario mixte."
+  },
+  "labels": [
+    "mix",
+    "benchmark",
+    "category-1k",
+    "rest"
+  ],
+  "compliance": {
+    "regions": [
+      "EMEA",
+      "AMER",
+      "APAC"
+    ],
+    "restrictions": {
+      "age": "NONE",
+      "shipping": "WORLDWIDE"
+    }
+  }
+}
+
