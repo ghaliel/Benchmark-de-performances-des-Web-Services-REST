@@ -99,7 +99,8 @@ Instrumentation commune :
 
 ## 5. Ressources JVM (T3 remplacé par capture)
 
-![Tableau de bord JVM Resources](docs/images/jvm-resources.png)
+<img width="1796" height="944" alt="jvm-resources" src="https://github.com/user-attachments/assets/2c0ef4f5-1d44-4e46-948c-837cb249eda0" />
+
 
 *Capture Grafana « REST Benchmark – JVM Resources » affichant : CPU process/system, Heap used vs max, Pauses GC, Threads actifs et connexions HikariCP. Assurez-vous que l’image est placée dans `docs/images/jvm-resources.png` pour l’affichage dans le README.*
 
@@ -183,19 +184,20 @@ Instrumentation commune :
 Les captures suivantes illustrent les tableaux de bord Grafana et InfluxDB utilisés pour l’analyse. Copiez vos exports PNG dans `docs/images/` afin qu’ils s’affichent correctement.
 
 **InfluxDB — Heavy body**
-![InfluxDB – Heavy body](docs/images/influxdb-heavy-body.png)
+<img width="1857" height="939" alt="influxdb-heavy-body" src="https://github.com/user-attachments/assets/ea52d068-8095-4891-ac5f-6e0df9c6c8e8" />
 
 **InfluxDB — Read heavy**
-![InfluxDB – Read heavy](docs/images/influxdb-read-heavy.png)
+<img width="1859" height="977" alt="influxdb-read-heavy" src="https://github.com/user-attachments/assets/5dabe565-41d3-4e4f-b55a-8fd5a9adf4be" />
 
 **InfluxDB — Join filter**
-![InfluxDB – Join filter](docs/images/influxdb-join-filter.png)
+<img width="1857" height="972" alt="influxdb-join-filter" src="https://github.com/user-attachments/assets/4c0311f9-2487-4d9a-abe7-42dcd520db0f" />
 
 **InfluxDB — Mixed**
-![InfluxDB – Mixed](docs/images/influxdb-mixed.png)
+<img width="1853" height="975" alt="influxdb-mixed" src="https://github.com/user-attachments/assets/5f6e6868-0fe2-4d4a-b528-3bc80fbcf507" />
 
 **Grafana — JMeter Benchmark**
-![Grafana – JMeter Benchmark](docs/images/jmeter-dashboard.png)
+<img width="1893" height="983" alt="jmeter-dashboard" src="https://github.com/user-attachments/assets/a96de94f-50ba-47ef-b412-5143c8b5b269" />
+
 
 ---
 
